@@ -1,0 +1,133 @@
+repository = gudang (folder project kita)
+
+commit = serahkan/lakukan (rekaman dari repo)
+
+branch = cabang (cabang bebas dari sebuah commint)
+-membuat rekaman/commit tanpa mengganggu jalur utama(master branch)
+-membuat commint experimental
+
+merge = menggabungkan (menggabungkan branch)
+
+pull = tarik (mengambil commit dar repo)
+
+push = dorong (mengirimkan commit ke repo)
+
+remote = sumber yg memiliki repo
+
+hash = penanda unik pd commit
+
+checkout = berpindah ke sebuah commit
+
+clone = mengambil repo dari remote
+
+fork/forking = membuat copy dari repo
+-modifikasi terhadapa repo
+-kontribusi pada repo orang lain
+-fork bukan clone
+
+================================
+$ git init = menginisiasi repo
+$ git add <file(s)> = menambahkan file ke stagging area
+$ git status = mengetahui status repo
+$ git commit = untuk commit
+$ git config = untuk memasukan konfigurasi ke dalam git
+$ git branch = bikin branch
+$ git help = melihat help
+$ clear = membersihkan
+$ git log = melihat log commit
+$ git log -3 = melihat log commit 3 terakhir
+
+
+==============================
+
+1. Konfigurasi Git
+git config --global user.name "Nama Anda" → Mengatur nama pengguna Git.
+git config --global user.email "email@domain.com" → Mengatur email pengguna Git.
+git config --list → Menampilkan konfigurasi Git saat ini.
+git config --global core.editor "code --wait" → Mengatur editor teks default.
+git config --global color.ui auto → Mengaktifkan warna pada tampilan Git.
+2. Inisialisasi & Kloning Repository
+git init → Membuat repository baru di folder saat ini.
+git clone [url] → Mengunduh repository dari URL.
+git clone [url] [folder] → Mengunduh repository ke folder tertentu.
+3. Menambahkan & Menghapus File
+git add [file] → Menambahkan file ke staging area.
+git add . → Menambahkan semua perubahan di folder saat ini.
+git rm [file] → Menghapus file dari repository.
+git rm --cached [file] → Menghapus file dari repository tetapi tetap ada di lokal.
+4. Commit Perubahan
+git commit -m "Pesan commit" → Menyimpan perubahan dengan pesan tertentu.
+git commit -a -m "Pesan commit" → Menyimpan semua perubahan dan langsung commit.
+git commit --amend -m "Pesan baru" → Mengedit commit terakhir.
+5. Mengecek Status & Log
+git status → Menampilkan status perubahan dalam repository.
+git log → Melihat riwayat commit.
+git log --oneline → Melihat log commit secara ringkas.
+git log --graph → Menampilkan struktur cabang commit secara visual.
+git log -p → Menampilkan detail perubahan dalam commit.
+6. Branching & Merging
+git branch → Melihat daftar cabang.
+git branch [nama_cabang] → Membuat cabang baru.
+git checkout [nama_cabang] → Berpindah ke cabang lain.
+git checkout -b [nama_cabang] → Membuat dan langsung berpindah ke cabang baru.
+git merge [nama_cabang] → Menggabungkan cabang ke cabang aktif.
+7. Remote Repository
+git remote → Menampilkan daftar remote repository.
+git remote -v → Menampilkan URL remote repository.
+git remote add origin [url] → Menyambungkan repository lokal ke GitHub.
+git fetch → Mengambil pembaruan terbaru dari remote tanpa menggabungkannya.
+git pull → Mengambil perubahan terbaru dan langsung menggabungkannya.
+git push → Mengunggah perubahan ke repository GitHub.
+git push origin [branch] → Mengunggah perubahan ke branch tertentu.
+git push -u origin [branch] → Mengunggah dan mengatur branch upstream.
+8. Melihat Perubahan
+git diff → Menampilkan perbedaan file yang belum di-commit.
+git diff [branch1] [branch2] → Menampilkan perbedaan antara dua branch.
+git diff --staged → Menampilkan perbedaan file yang telah di-staging.
+git show [commit] → Menampilkan detail commit tertentu.
+9. Membatalkan Perubahan
+git reset [file] → Menghapus file dari staging area.
+git reset --hard → Mengembalikan semua perubahan ke commit terakhir.
+git reset [commit] → Mengembalikan repository ke commit tertentu.
+git revert [commit] → Membatalkan commit tanpa menghapus history.
+git clean -f → Menghapus file yang tidak dilacak di repository.
+10. Stashing (Menyimpan Perubahan Sementara)
+git stash → Menyimpan perubahan sementara tanpa commit.
+git stash list → Melihat daftar perubahan yang disimpan sementara.
+git stash apply → Mengembalikan perubahan yang disimpan.
+git stash drop → Menghapus perubahan dari stash.
+11. Tagging (Menandai Versi Repository)
+git tag → Melihat daftar tag.
+git tag -a v1.0 -m "Versi 1.0" → Membuat tag dengan pesan tertentu.
+git tag -d v1.0 → Menghapus tag tertentu.
+git push origin v1.0 → Mengunggah tag ke GitHub.
+git push origin --tags → Mengunggah semua tag ke GitHub.
+12. Submodul Git
+git submodule add [url] [path] → Menambahkan repository sebagai submodul.
+git submodule init → Menginisialisasi submodul dalam repository.
+git submodule update → Memperbarui submodul ke versi terbaru.
+13. Alihkan Cabang (Switch)
+git switch [branch] → Berpindah ke cabang lain.
+git switch -c [branch] → Membuat cabang baru dan langsung berpindah ke sana.
+14. Perbaikan Konflik Merge
+git mergetool → Menjalankan alat bantu untuk menyelesaikan konflik merge.
+git merge --abort → Membatalkan proses merge jika terjadi konflik.
+15. Informasi & Statistik
+git blame [file] → Melihat siapa yang mengedit setiap baris dalam file.
+git shortlog → Menampilkan ringkasan commit berdasarkan penulis.
+git reflog → Melihat semua perubahan referensi dalam repository.
+16. Lain-lain
+git describe → Menampilkan tag atau branch terbaru.
+git archive → Membuat arsip zip dari repository.
+git bisect → Mencari commit yang menyebabkan bug.
+git cherry-pick [commit] → Menerapkan commit tertentu ke branch aktif.
+git grep [pattern] → Mencari teks dalam file repository.
+git mv [file_asal] [file_tujuan] → Memindahkan atau mengganti nama file dalam repository.
+17. Perintah Lanjutan
+git rebase [branch] → Menggabungkan perubahan dari satu branch ke branch lain dengan cara linier.
+git reflog expire --expire=now --all → Membersihkan riwayat reflog lama.
+git fsck → Memeriksa integritas repository Git.
+git gc → Membersihkan dan mengoptimalkan repository Git.
+git prune → Menghapus referensi yang tidak digunakan dalam repository.
+git filter-branch → Mengubah riwayat commit dengan filter tertentu.
+git worktree add [path] [branch] → Mengelola beberapa worktree dalam satu repository.
