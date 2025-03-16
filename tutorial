@@ -146,3 +146,32 @@ git gc → Membersihkan dan mengoptimalkan repository Git.
 git prune → Menghapus referensi yang tidak digunakan dalam repository.
 git filter-branch → Mengubah riwayat commit dengan filter tertentu.
 git worktree add [path] [branch] → Mengelola beberapa worktree dalam satu repository.
+=========================================
+
+1. Jika Repository Anda Publik
+🔹 Orang lain tidak bisa langsung mengedit repository Anda, tetapi mereka bisa:
+✅ Melakukan Fork → Mereka dapat membuat salinan repository Anda ke akun mereka, mengeditnya, dan mengajukan Pull Request (PR) untuk meminta perubahan diterapkan ke repository Anda. Anda bisa menerima atau menolaknya.
+✅ Membuka Issue → Bisa memberikan saran atau melaporkan bug, tetapi tidak bisa mengedit kode langsung.
+
+2. Jika Repository Anda Private
+🔹 Hanya orang yang Anda undang bisa melihat dan berkontribusi.
+✅ Anda bisa mengatur izin siapa yang bisa membaca, menulis, atau mengelola repository.
+
+3. Jika Repository Anda Milik Organisasi
+🔹 Akses ditentukan berdasarkan peran yang diberikan oleh pemilik repository.
+✅ Anda bisa mengontrol siapa yang bisa mengedit, siapa yang hanya bisa melihat, dan siapa yang bisa mengelola repository.
+
+4. Cara Mengatur Izin Akses Repository
+Jika Anda ingin mengontrol siapa yang bisa mengedit, ikuti langkah ini:
+1️⃣ Buka repository Anda di GitHub.
+2️⃣ Pergi ke "Settings" → "Manage access".
+3️⃣ Tambahkan atau ubah izin pengguna:
+
+Read → Hanya bisa melihat.
+Triage → Bisa mengelola issue dan pull request.
+Write → Bisa mengedit dan melakukan push ke repository.
+Maintain → Bisa mengelola repository tanpa menghapusnya.
+Admin → Memiliki semua hak akses termasuk menghapus repository.
+Kesimpulan:
+🚫 Tidak semua orang bisa langsung mengedit repository Anda tanpa konfirmasi.
+✅ Mereka harus membuat Pull Request (untuk repository publik) atau harus diberi akses terlebih dahulu (untuk repository private).
