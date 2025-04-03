@@ -36,7 +36,7 @@ $ git help = melihat help
 $ clear = membersihkan
 $ git log = melihat log commit
 $ git log -3 = melihat log commit 3 terakhir
-
+Remove-Item -Recurse -Force .git = hapus git di local
 
 ==============================
 
